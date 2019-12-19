@@ -1,0 +1,20 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle at center, black 15%, #6f4e6a 19%, white 20%, #f0b1c2 30%, #f29ebb 50%, #6f4e6a);
+}
+
+h1 {
+    color: white;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 200;
+}
