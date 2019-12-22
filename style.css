@@ -1,20 +1,126 @@
+* {
+    color: #eee;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 200;
+}
+
 html, body {
     padding: 0;
     margin: 0;
 }
 
 body {
+    background: #6f4e6a;
+}
+
+#splash {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     height: 100vh;
-    background: radial-gradient(circle at center, black 15%, #6f4e6a 19%, white 20%, #f0b1c2 30%, #f29ebb 50%, #6f4e6a);
+    background: radial-gradient(circle at center, white, #f0b1c2 29%, #f29ebb 50%, #6f4e6a);
+}
+
+#moon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    width: 400px;
+    margin-left: -200px;
+    margin-top: -200px;
+    background: radial-gradient(circle at center, black 45%, #222 54%, #6f4e6a 59%, rgba(255,255,255,0.15) 63%, transparent 65%);
+}
+
+#jewel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(circle at 52% 40%, white, rgba(255,255,255,0.5) 8%, transparent 12%);
+    animation: backsplash 2s ease-out forwards;
+}
+
+#lens {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(circle at 48% 60%, rgba(255,255,255,0.5), transparent 5%);
+    animation: lens 2s ease-out forwards;
+}
+
+#lens2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(circle at 46% 64%, rgba(255,255,255,0.4), transparent 3%);
+    animation: lens2 2s ease-out forwards;
+}
+
+#resources {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+#resources > div {
+    text-align: center;
+    max-width: 500px;
 }
 
 h1 {
-    color: white;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    font-weight: 200;
+    letter-spacing: 20px;
+    margin: 0;
+    font-size: 40px;
+    animation: title 1.85s ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+    transform: translateY(-60px);
+    margin-right: -.4em;
+}
+
+@keyframes backsplash {
+    from {
+        left: 0;
+    }
+    to {
+        left: 350px;
+    }
+}
+
+@keyframes lens {
+    from {
+        left: 0;
+    }
+    to {
+        left: -350px;
+    }
+}
+
+@keyframes lens2 {
+    from {
+        left: 0;
+    }
+    to {
+        left: -450px;
+    }
+}
+
+@keyframes title {
+    from {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
